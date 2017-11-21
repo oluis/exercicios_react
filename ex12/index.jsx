@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom'
 import {combineReducers, createStore} from 'redux'
 import {Provider} from 'react-redux'
 
-import BoasVindas from './boasVindas'
-import usuarioReducer from './usuarioReducer'
+import Counter from './counter'
+import counterReducer from './counterReducer'
 
 const reducers = combineReducers({
-  usuario: usuarioReducer
+  counter: counterReducer
 })
 
 ReactDOM.render(
   <Provider store={createStore(reducers)}>
-    <BoasVindas></BoasVindas>
+    <Counter></Counter>
   </Provider>
 , document.getElementById('app'))
